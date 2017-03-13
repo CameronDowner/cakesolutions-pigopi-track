@@ -27,15 +27,12 @@ move_fwd(cm_to_unit(25.4))
 
 move_left(90)
 
-for _ in range(5):
-    move_fwd(cm_to_unit(232.5/5))
+move_fwd(cm_to_unit(232.5))
 
 rotate(right=True)
 
-for _ in range(5):
-    move_fwd(cm_to_unit(288.9 / 5))
+move_fwd(cm_to_unit(288.9))
 
 rotate(right=False)
 
-for _ in range(5):
-    move_fwd(cm_to_unit(275 / 5))
+move_fwd(cm_to_unit(275))
