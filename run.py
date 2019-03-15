@@ -2,11 +2,9 @@
 # 1 unit moves the robot ~ 330mm
 # Left & Right takes degrees
 
-#!/usr/bin/python
+#!/usr/bin/env python
 
 from gopigo import *
-
-## Helper functions
 
 def cm_to_unit(cm):
     return cm / 33
@@ -21,18 +19,20 @@ def rotate(right):
     move_fwd(1)
     turn(45)
 
-##  Robot moving
+def main():
+    move_fwd(cm_to_unit(25.4))
 
-move_fwd(cm_to_unit(25.4))
+    move_left(90)
 
-move_left(90)
+    move_fwd(cm_to_unit(232.5))
 
-move_fwd(cm_to_unit(232.5))
+    rotate(right=True)
 
-rotate(right=True)
+    move_fwd(cm_to_unit(288.9))
 
-move_fwd(cm_to_unit(288.9))
+    rotate(right=False)
 
-rotate(right=False)
+    move_fwd(cm_to_unit(275))
 
-move_fwd(cm_to_unit(275))
+if __name__ == "__main__":
+    main()
